@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/*__scrollbar__*/
+html {
+  scrollbar-color: #e78e00  #000000;
+}
+
+/*__animation__*/
+.animation{
+    animation: animated ease;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 30%;
+}
+
+@keyframes animated{
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
