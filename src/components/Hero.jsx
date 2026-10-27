@@ -204,7 +204,7 @@ const Hero = ({ lang: propLang }) => {
               <div className="relative bg-gray-900/90 rounded-2xl p-3 lg:p-4 border border-orange-500/30 shadow-2xl">
                 <div className="w-full overflow-hidden h-64 md:h-80 lg:h-96 bg-black rounded-xl flex items-center justify-center border border-orange-500/20">
                   <img
-                    src="/astra.jpg"
+                    src="/astra.png"
                     className="h-full w-full object-cover rounded-lg"
                     alt={t.imgAlt}
                   />

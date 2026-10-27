@@ -14,7 +14,6 @@ const ProgramsSection = ({ lang = "en" }) => {
     subtitle: isAr
       ? "قم بتحميل التطبيق المناسب لجهازك واستمتع بتجربة بث استثنائية وعالية الجودة"
       : "Download the suitable app for your device and enjoy an exceptional, high-quality streaming experience",
-    codeLabel: isAr ? "كود التحميل من Downloader:" : "Download code from Downloader:",
     downloadBtn: isAr ? "تحميل التطبيق" : "Download App",
     noCode: isAr ? "لا يحتاج لكود" : "No Code Needed",
   };
@@ -26,7 +25,8 @@ const ProgramsSection = ({ lang = "en" }) => {
       badge: isAr ? "أندرويد" : "Android",
       description: isAr ? "للبث على أجهزة أندرويد" : "To stream on Android devices",
       downloadUrl: "https://aftv.news/2169095",
-      code: "2169095",
+      textcode:isAr ? "كود التحميل من Downloader" : "Download code from Downloader",
+      code: "9348503",
       image:
         "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
       gradient: "from-orange-500 to-amber-500",
@@ -37,24 +37,13 @@ const ProgramsSection = ({ lang = "en" }) => {
       name: isAr ? "تطبيق آيفون" : "iPhone App",
       badge: isAr ? "آيفون" : "iPhone",
       description: isAr ? "للبث على أجهزة iOS" : "To stream on iOS devices",
-      downloadUrl: "https://apps.apple.com/app/000-player/id1665441224",
-      code: "882",
+      downloadUrl: "https://apps.apple.com/eg/app/var-player-unlock-your-world/id6477530321",
+        textcode:isAr ? "كود السيرفر " : "Server Code",
+      code: "4010",
       image:
         "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
       gradient: "from-orange-400 to-orange-600",
-      link: "https://apps.apple.com/app/000-player/id1665441224",
-    },
-    {
-      id: 3,
-      name: isAr ? "تطبيق ويندوز" : "Windows App",
-      badge: isAr ? "ويندوز" : "Windows",
-      description: isAr ? "للبث على أجهزة الكمبيوتر" : "To stream on PC devices",
-      downloadUrl: "https://ch4k.live/CeMe/CeMe-win.exe",
-      code: texts.noCode,
-      image:
-        "https://images.unsplash.com/photo-1547082299-de196ea013d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-      gradient: "from-amber-500 to-orange-500",
-      link: "https://ch4k.live/CeMe/CeMe-win.exe",
+      link: "https://apps.apple.com/eg/app/var-player-unlock-your-world/id6477530321",
     },
   ];
 
@@ -88,7 +77,7 @@ const ProgramsSection = ({ lang = "en" }) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-8 max-w-6xl mx-auto">
           {programs.map((program) => (
             <div
               key={program.id}
@@ -124,6 +113,9 @@ const ProgramsSection = ({ lang = "en" }) => {
                 {/* active code */}
                 {program.code && (
                   <div className="mb-6 p-4 bg-black/50 rounded-xl border border-orange-500/10 backdrop-blur-sm">
+                                                        <div className="text-orange-400 text-sm mb-2 font-semibold">
+                      {program.textcode}
+                    </div>
                     <div className="text-orange-400 text-sm mb-2 font-semibold">
                       {texts.codeLabel}
                     </div>

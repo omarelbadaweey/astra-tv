@@ -57,7 +57,7 @@ const PackagesSection = ({ selectedCountry, lang = "en" }) => {
   const content = {
     ar: {
       titlePrefix: "باقات ",
-      titleHighlight: "متجر أورنج",
+      titleHighlight: "متجر أسترا",
       description: "اختر الباقة التي تناسب احتياجاتك واستمتع بأفضل تجربة مشاهدة.",
       forText: "لمدة",
       mostPopular: "⭐ الأكثر طلباً",
